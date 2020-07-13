@@ -1,0 +1,107 @@
+
+/*order same a site top to bottom, ids at bottom*/
+.pic{
+height: 50vh;
+content: "\200B";
+width:100vh;
+text-align: center;
+}
+.heading{
+    background-color: #f9f9f9;
+
+}
+.dropbtn {
+  background-color: #f9f9f9;
+  color: #317598;
+  padding: 24px;
+  padding-bottom: 8px;
+  font-size: 24px;
+  border: none;
+
+}
+
+.dropdown {
+  position:relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  text-align: left;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #8DB8E7;}
+
+.textPage{
+  margin: 10%;
+  margin-top: 1%;
+  font-family: serif;
+  color: #212121;
+}
+.title{
+/*  font-family: serif;*/
+  color: #317598;
+}
+.inner{
+  color: #317598;
+  text-decoration: underline;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+#penrose{
+  width: 30%;
+  height: auto;
+  padding: 10px;
+  margin: 10px;
+  padding-bottom: 50px;
+  float:left;
+  text-align: center;
+}
+.section{
+  padding-bottom: 8px;
+}
+#learn{
+  width: 20%;
+  height: auto;
+  padding: 10px;
+  margin: 10px;
+  padding-bottom: 40px;
+  float:right;
+  text-align: center;
+}
+
+#nav{
+  text-align: right;
+}
+#home, #resources, #contest, #register{
+  border-bottom-style: solid;
+  border-bottom-color: #8DB8E7;
+}
