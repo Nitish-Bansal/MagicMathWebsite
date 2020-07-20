@@ -1,14 +1,16 @@
 
 /*order same a site top to bottom, ids at bottom*/
 .pic{
-height: 50vh;
+height: 36px;
 content: "\200B";
 width:100vh;
 text-align: center;
 }
 .heading{
     background-color: #f9f9f9;
-
+}
+#top_bar{
+  margin-left: 10%;
 }
 .dropbtn {
   background-color: #f9f9f9;
@@ -42,9 +44,12 @@ text-align: center;
   display: block;
 }
 .dropdown-content a:hover {background-color: #ddd;}
-
+@media (min-width:800px){
 .dropdown:hover .dropdown-content {display: block;}
-
+#penrose_caption::after{
+  content:"The Penrose Triangle: an impossible figure which cannot be created in the physical world. This object was an inspiration for the logo."
+}
+}
 .dropdown:hover .dropbtn {background-color: #8DB8E7;}
 
 .textPage{
@@ -79,21 +84,20 @@ tr:nth-child(even) {
 #penrose{
   width: 30%;
   height: auto;
-  padding: 10px;
-  margin: 10px;
-  padding-bottom: 50px;
+  padding-right: 10px;
+  height: auto;
   float:left;
   text-align: center;
 }
+
 .section{
-  padding-bottom: 8px;
+  padding-bottom: 20px;
 }
 #learn{
   width: 20%;
   height: auto;
   padding: 10px;
   margin: 10px;
-  padding-bottom: 40px;
   float:right;
   text-align: center;
 }
