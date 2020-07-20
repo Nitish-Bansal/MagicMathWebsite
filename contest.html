@@ -16,15 +16,24 @@
     <title>Magic Math!</title>
     <link rel="icon" type="png" href="testlogo.png">
     <style>
+    @media (max-width:800px){
+      .mid_pic{
+        height: 36px;
+      }
+      .dropbtn{
+        padding: 12px;
+        padding-bottom: 4px;
+        font-size: 18px;
+      }
+      .textPage{
+        margin: 5%;
+      }
+      #logo{
+        height: 32px;
+      }
+    }
     body {
       margin:0;
-      background-image: url('quote3.jpg');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-position: center;
-      background-position: top;
-      background-size: 100%;
-
     }
 
     .navbar {
@@ -40,13 +49,7 @@
     .navbar a {
       float: left;
       display: block;
-      color: black;
-      text-align: center;
-      padding: 14px;
       padding-bottom: 4px;
-      text-decoration: none;
-      font-size: 48px;
-      font-family: fantasy;
       vertical-align: middle;
     }
     #logo:hover{
@@ -66,10 +69,11 @@
   </head>
 <body>
   <div class="navbar">
-<a href="index%20copy.html"><img src="trylogo.png" width="300" height="36" id="logo"></a>
+<a href="index%20copy.html"><img src="trylogo.png" height="36px" id="logo"></a>
 </div>
 
-<div class="pic">
+<div>
+<img src="quote3.jpg" width="100%" class="mid_pic">
 </div>
 
 
