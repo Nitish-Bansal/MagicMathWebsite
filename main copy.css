@@ -12,6 +12,9 @@ text-align: center;
 #top_bar{
   margin-left: 10%;
 }
+.on-page{
+  background-color: #E7F7FE;
+}
 .dropbtn {
   background-color: #f9f9f9;
   color: #317598;
@@ -54,7 +57,7 @@ text-align: center;
 
 .textPage{
   margin: 10%;
-  margin-top: 1%;
+  margin-top: 0%;
   font-family: serif;
   color: #212121;
 }
@@ -66,21 +69,8 @@ text-align: center;
   color: #317598;
   text-decoration: underline;
 }
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
 
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
 #penrose{
   width: 30%;
   height: auto;
