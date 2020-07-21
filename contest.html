@@ -13,12 +13,13 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <link rel="stylesheet"
              href="https://fonts.googleapis.com/css?family=Roboto+Slab">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <title>Magic Math!</title>
     <link rel="icon" type="png" href="testlogo.png">
     <style>
     @media (max-width:800px){
       .mid_pic{
-        height: 36px;
+        height: 0px;
       }
       .dropbtn{
         padding: 12px;
@@ -31,20 +32,137 @@
       #logo{
         height: 32px;
       }
+      .navbar{
+        position: relative;
+        z-index: 0;
+        overflow: auto;
+        width: 90%;
+        background-color: #f9f9f9;
+        height: auto;
+      }
+      .leftdrop{
+        position:relative;
+        display: inline-block;
+        float: right;
+        background-color: #f9f9f9;
+      }
+      .leftdrop:hover .dropdown-content {display: inherit;}
+      #menu-content{
+        right: 0;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        text-align: left;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .dropdown-content a:hover {background-color: #ddd;}
+      .dropdown:hover .dropdown-content {display: block;}
+
+      .dropbtn {
+        background-color: #f9f9f9;
+        color: #317598;
+        padding: 0px;
+        padding-bottom: 0px;
+        font-size: 0px;
+        border: none;
+        height: 0px;
+        width: 0px;
+        display: none;
+      }
+
+      .dropdown {
+        position:relative;
+        display: inline-block;
+      }
+      .heading{
+        height: 0px;
+      }
+
     }
-    body {
-      margin:0;
+    @media (min-width:800px){
+      .navbar {
+        overflow: hidden;
+        background-color: #f9f9f9;
+        color: black;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        float:left;
+          z-index: 2;
+      }
+      .leftdrop{
+        display: none;
+        width: 0px;
+        height: 0px;
+        padding: 0px;
+        margin: 0px;
+      }
+      #menu-content{
+        width: 0px;
+        height: 0px;
+        padding: 0px;
+        margin: 0px;
+      }
+      #demo-menu-lower-right{
+        width: 0px;
+        height: 0px;
+        padding: 0px;
+        margin: 0px;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        text-align: left;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .dropdown-content a:hover {background-color: #ddd;}
+      .dropdown:hover .dropdown-content {display: block;}
+
+      .dropbtn {
+        background-color: #f9f9f9;
+        color: #317598;
+        padding: 24px;
+        padding-bottom: 8px;
+        font-size: 24px;
+        border: none;
+
+      }
+
+      .dropdown {
+        position:relative;
+        display: inline-block;
+      }
+
     }
 
-    .navbar {
-      overflow: hidden;
-      background-color: #f9f9f9;
-      color: black;
-      position: fixed;
-      top: 0;
-      width: 100%;
-        z-index: 2;
+    body {
+      margin-top: 0px;
     }
+
+
 
     .navbar a {
       float: left;
@@ -52,6 +170,8 @@
       padding-bottom: 4px;
       vertical-align: middle;
     }
+
+
     #logo:hover{
       opacity: 0.4;
     }
@@ -68,9 +188,31 @@
     </style>
   </head>
 <body>
-  <div class="navbar">
-<a href="index%20copy.html"><img src="trylogo.png" height="36px" id="logo"></a>
-</div>
+
+  <table style="width:100%">
+  <tr>
+  <th style="background-color: #f9f9f9;">
+    <div class="navbar">
+  <a href="index%20copy.html"><img src="trylogo.png" height="36px" id="logo"></a>
+  </div>
+  </th>
+  <th style="background-color: #f9f9f9;">
+  <h6><div class="leftdrop">
+  <button id="demo-menu-lower-right"
+          class="mdl-button mdl-js-button mdl-button--icon">
+    <i class="material-icons">more_vert</i>
+  </button>
+  <div class="dropdown-content" id="menu-content">
+    <a href="index%20copy.html" style="color: #317598;">Home</a>
+    <a href="resources.html" style="color: #317598;">Resources</a>
+    <a href="contest.html" style="color: #317598;" class="on-page">Contest</a>
+    <a href="register.html" style="color: #317598;" >Register</a>
+  </div>
+  </div>
+  </h6>
+  </th>
+  </tr>
+  </table>
 
 <div>
 <img src="quote3.jpg" width="100%" class="mid_pic">
@@ -118,11 +260,6 @@
   <div class="col-2">
     <h6><div class="dropdown">
     <button class="dropbtn", id="contest">Contest</button>
-    <div class="dropdown-content">
-    <a href="contest.html">Time Zone: Pacific</a>
-    <a href="contest.html">Time Zone: Eastern</a>
-    <a href="contest.html">Time Zone: UK</a>
-  </div>
   </div>
   </h6>
 </div>
@@ -144,9 +281,11 @@
 <div class = "textPage">
 <h3 class="title">Contest Links</h3>
 <p>This page will contain the contest link during the time of the contest. Please use the link that corresponds to your timezone.</p>
-<p>There are no links here because there are no contests going on at the moment.</p>
-
+<p>The next Magic Math Elementary School Contest is scheduled for this Friday July 24 or Saturday July 25 depending on your timezone.</p>
+<p>Please <a href="https://docs.google.com/forms/d/e/1FAIpQLSez4zcBgXrTgc-Jp2i6nkKx2CZ3nMfMRx4-CMNLPIua5xpEJg/viewform?usp=sf_link" class="inner" target="_blank">register here</a>. </p>
+<p><h4 class="title">North America West Coast:</h4> Coming July 25 at 3pm</p>
+<p><h4 class="title">North America East Coast:</h4> Coming July 26</p>
+<p><h4 class="title">United Kingdom:</h4> Coming July 26</p>
+<p><h4 class="title">India:</h4> Coming July 26</p>
 </div>
-
-
 </body>
