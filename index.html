@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <link rel="stylesheet" href="main copy.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Google MDL-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link rel="stylesheet"
+             href="https://fonts.googleapis.com/css?family=Roboto+Slab">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <title>Magic Math!</title>
+    <link rel="icon" type="png" href="testlogo.png">
+    <style>
+    @media (max-width:800px){
+      #big_alert{
+        display: none;
+      }
+      #logo{
+        height: 32px;
+      }
+      #penrose{
+        height: 0px;
+        width: 0px;
+        padding: 0px;
+        margin:0px;
+      }
+      #learn{
+        width: 30%;
+      }
+      .section{
+        padding-bottom: 8px;
+      }
+      .mid_pic{
+        height: 0px;
+      }
+      .dropbtn{
+        padding: 12px;
+        padding-bottom: 4px;
+        font-size: 18px;
+      }
+      .textPage{
+        margin: 5%;
+        margin-top: 0%;
+      }
+      #logo{
+        height: 32px;
+      }
+      .navbar{
+        position: relative;
+        z-index: 0;
+        overflow: auto;
+        width: 90%;
+        background-color: #f9f9f9;
+        height: auto;
+      }
+      .leftdrop{
+        position:relative;
+        display: inline-block;
+        float: right;
+        background-color: #f9f9f9;
+      }
+      .leftdrop:hover .dropdown-content {display: inherit;}
+      #menu-content{
+        right: 0;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        text-align: left;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+
+      }
+      .dropdown-content a:hover {background-color: #ddd;}
+      .dropdown:hover .dropdown-content {display: block;}
+
+      .dropbtn {
+        background-color: #f9f9f9;
+        color: #317598;
+        padding: 0px;
+        padding-bottom: 0px;
+        font-size: 0px;
+        border: none;
+        height: 0px;
+        width: 0px;
+        display: none;
+      }
+
+      .dropdown {
+        position:relative;
+        display: inline-block;
+      }
+      .heading{
+        height: 0px;
+      }
+      q {
+        font-style: italic;
+        line-height: 2;
+        text-align: center;
+        font-size: 12px;
+      }
+
+    }
+    @media (min-width:800px){
+      q {
+        font-style: italic;
+        line-height: 2;
+        text-align: center;
+        font-size: 16px;
+      }
+      #small_alert{
+        display: none;
+      }
+      .navbar {
+        overflow: hidden;
+        background-color: #f9f9f9;
+        color: black;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        float:left;
+          z-index: 2;
+      }
+      .leftdrop{
+        display: none;
+        width: 0px;
+        height: 0px;
+        padding: 0px;
+        margin: 0px;
+      }
+      #menu-content{
+        width: 0px;
+        height: 0px;
+        padding: 0px;
+        margin: 0px;
+      }
+      #demo-menu-lower-right{
+        width: 0px;
+        height: 0px;
+        padding: 0px;
+        margin: 0px;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1 rgba(241,241,241,1);
+        text-align: left;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .dropdown-content a:hover {background-color: #ddd;}
+      .dropdown:hover .dropdown-content {display: block;}
+
+      .dropbtn {
+        background-color: #f9f9f9;
+        color: #317598;
+        padding: 24px;
+        padding-bottom: 8px;
+        font-size: 24px;
+        border: none;
+
+      }
+
+      .dropdown {
+        position:relative;
+        display: inline-block;
+      }
+
+    }
+
+    body {
+      margin-top: 0px;
+    }
+
+
+
+    .navbar a {
+      float: left;
+      display: block;
+      padding-bottom: 4px;
+      vertical-align: middle;
+    }
+
+
+    #logo:hover{
+      opacity: 0.4;
+    }
+
+    .main {
+      background-color: white;
+      /* Used in this example to enable scrolling */
+    }
+
+    p{
+        font-size: 16px;
+        font-family: "Roboto Slab";
+    }
+
+
+.slideshow-container {
+  position: relative;
+
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 20px;
+  text-align: center;
+  z-index: -1;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+    </style>
+  </head>
+  <body>
+
+    <table style="width:100%">
+    <tr>
+    <th style="background-color: #f9f9f9;">
+      <div class="navbar">
+    <a href="index.html"><img src="trylogo.png" height="36px" id="logo"></a>
+    <span class="mdl-chip" id="big_alert">
+    <span class="mdl-chip__text" >NEW: Sign-ups for next contest are now open on the Register Page.</span>
+    </span>
+    <span class="mdl-chip" id="small_alert">
+    <span class="mdl-chip__text" >NEW: Sign-ups are now open on the Register Page.</span>
+    </span>
+    </div>
+    </th>
+    <th style="background-color: #f9f9f9;">
+    <h6><div class="leftdrop">
+    <button id="demo-menu-lower-right" style="height: 60px; width: 60px;"
+            class="mdl-button mdl-js-button mdl-button--icon">
+      <i class="material-icons">more_vert</i>
+    </button>
+    <div class="dropdown-content" id="menu-content">
+      <a href="index.html" style="color: #317598;" class="on-page">Home</a>
+      <a href="resources.html" style="color: #317598;">Resources</a>
+      <a href="contest.html" style="color: #317598;">Contest</a>
+      <a href="register.html" style="color: #317598;" >Register</a>
+    </div>
+    </div>
+    </h6>
+    </th>
+    </tr>
+    </table>
+
+<div>
+<img src="quote2.jpg" width="100%" class="mid_pic">
+</div>
+
+
+<div class="main">
+
+<div class="heading">
+    <div class="container">
+      <div class="row">
+
+  <div class="row", id="nav">
+      <div class="col-2">
+        <h6><div class="dropdown">
+        <button class="dropbtn", id="home">Home</button>
+        <div class="dropdown-content">
+        <a href="#about">About</a>
+        <a href="#program">The Program</a>
+        <a href="#personal">Personal</a>
+        <a href="#contact">Contact</a>
+      </div>
+      </div>
+      </h6>
+</div>
+</div>
+<div class="row">
+    <div class="col-2">
+      <h6><div class="dropdown">
+      <a href="resources.html">
+      <button class="dropbtn">Resources</button>
+    </a>
+      <div class="dropdown-content">
+      <a href="resources.html#archive">Magic Math Contest Archive</a>
+      <a href="resources.html#tricks">Videos: Math Tricks</a>
+      <a href="resources.html#amc">Videos: AMC8</a>
+    </div>
+    </div>
+    </h6>
+</div>
+</div>
+<div class="row">
+    <div class="col-2">
+      <h6><div class="dropdown">
+        <a href="contest.html">
+      <button class="dropbtn">Contest</button>
+    </a>
+    </div>
+    </h6>
+</div>
+</div>
+<div class="row">
+    <div class="col-2">
+      <h6><div class="dropdown">
+        <a href="register.html">
+      <button class="dropbtn">Register</button>
+    </a>
+    </div>
+    </h6>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class = "textPage">
+
+<div class="slideshow-container">
+
+<div class="mySlides">
+  <q>Thanks Magic Math for helping parents and kids during such challenging COVID times. I want to congratulate you for starting this brilliant initiative. It's spreading Math Knowledge in little kids and they are learning a lot even while staying at home. My daughter Seher Sharma (9 years old) has developed immense interest in Math problems after participating in your contests and watching solution videos. She is already learning new concepts every week and if she continues like this, I am sure she will also realize the Magic of Math really early in her life. Thanks again and All the very best.</q>
+  <p class="testimonials">- Pooja Sharma (Toronto, Canada)</p>
+</div>
+
+<div class="mySlides">
+  <q>Thank you so much for organizing Math Contest for kids online!. My third grader kid who attends Dilworth Elementary (West San Jose) is benefitting greatly from these questions and the video you post after the contest is very helpful. Its a very thoughtful contest, well planned, solutions very well explained in the videos. Again thanks so much for these contests.</q>
+  <p class="testimonials">- Parent of an Elementary School Contestant</p>
+</div>
+
+<div class="mySlides">
+  <q>Thank you for doing this. It shows how much you like math and how much you care about spreading the joy to future generations. Way to go!! Keep it up!</q>
+  <p class="testimonials">- Parent of a Middle School Contestant</p>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+
+
+<div class = "section">
+<figure id="penrose">
+<img src="penrose.gif" width= "100%">
+<figcaption id="penrose_caption"></figcaption>
+</figure>
+<h3 class="title" id="about">About</h3>
+<p>Magic Math is determined to spread the beauty of contest math among young students and offer free educational resources to get started. The organization was founded in California during the COVID-19 pandemic to keep students engaged and excited about math while schools had been shut down. Since then, the organization has expanded to four different countries, educating over one hundred students.</p>
+<p>Participating in Magic Math contests are a fun and easy way to get exposer about contest math. We help students prepare for their journey by creating contests and resources to learn from. Our prior contests along with additional resources can be found under the <a href="resources.html"class="inner">Resources tab</a>.</p>
+</div>
+<div class = "section">
+<img src="learn.png" id="learn">
+<h3 class="title" id="program">The Program</h3>
+<p>Magic Math organizes a series of math competitions that take place every two weeks. Anyone can register by clicking the <a href="register.html" class="inner">Register tab</a>. During the contest, students solve a variety of problems based on their grade level and recieve a rank after the contest is finished. Additionally, they get the test paper along with a Youtube video containing solutions for every problem so that they can learn from their mistakes!</p>
+</div>
+<div class = "section">
+<h3 class="title" id="personal">Who am I?</h3>
+<p>I am Nitish Bansal, founder of Magic Math. In middle school, I participated in math competitions and turns out that was the best decision I ever made! I created Magic Math to help students develop their passion for math and motivate them to learn more. I started off teaching math, free of charge, in my community library and making Youtube videos containing interesting math tricks. Furthermore, I am an AIME qualifier, Miller MATHCOUNTS Coach, and achieved AMC8 Distinguished Honor Roll in middle school.</p>
+</div>
+<h3 class="title" id="contact">Contact</h3>
+<p>Join the Magic Math mailing list on the <a href="register.html" class="inner">Register tab</a>.</p>
+<p>Please send any questions to <a class="inner" href="mailto:magicmath2000@gmail.com">magicmath2000@gmail.com</a>.</p>
+</div>
+</div>
+
+</body>
+</html>
